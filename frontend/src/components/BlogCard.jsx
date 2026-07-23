@@ -36,9 +36,6 @@ function BlogCard({ blog }) {
 
         <article className="bg-[#ABC270] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 mt-10px pt-5px">
 
-
-            {/* Featured Image */}
-
             <Link to={`/blogs/${blog.slug}`}>
 
                 <img
@@ -56,9 +53,6 @@ function BlogCard({ blog }) {
 
             <div className="p-5">
 
-
-                {/* Category */}
-
                 {
                     blog.category?.name && (
 
@@ -71,10 +65,6 @@ function BlogCard({ blog }) {
                     )
                 }
 
-
-
-                {/* Title */}
-
                 <Link to={`/blogs/${blog.slug}`}>
 
                     <h2 className="text-2xl font-bold hover:text-blue-600 transition line-clamp-2">
@@ -85,21 +75,11 @@ function BlogCard({ blog }) {
 
                 </Link>
 
-
-
-
-                {/* Excerpt */}
-
                 <p className="text-gray-600 mt-3 line-clamp-3">
 
                     {blog.excerpt}
 
                 </p>
-
-
-
-
-                {/* Tags */}
 
                 {
                     blog.tags?.length > 0 && (
@@ -122,12 +102,6 @@ function BlogCard({ blog }) {
                     )
                 }
 
-
-
-
-
-                {/* Author */}
-
                 <div className="flex items-center gap-3 mt-5">
 
 
@@ -147,47 +121,29 @@ function BlogCard({ blog }) {
                         )
                     }
 
-
-
                     <div>
-
                         <p className="font-medium">
 
                             {blog.author?.username || "Unknown"}
 
                         </p>
 
-
                         <p className="text-sm text-gray-500">
-
                             {
                                 blog.createdAt
                                 ? new Date(blog.createdAt)
                                     .toLocaleDateString()
                                 : ""
                             }
-
                         </p>
-
-
                     </div>
-
-
                 </div>
 
-
-
-
-
-                {/* Stats */}
 
                 <div className="flex items-center justify-between mt-5 text-gray-600">
 
 
                     <div className="flex gap-4">
-
-
-                        {/* Likes */}
 
                        <button
                             onClick={handleLike}
@@ -204,7 +160,6 @@ function BlogCard({ blog }) {
                             {blog.likesCount}
                         </button>
 
-                        {/* Comments */}
 
                         <div className="flex items-center gap-1">
 
@@ -219,11 +174,6 @@ function BlogCard({ blog }) {
 
                         </div>
 
-
-
-
-                        {/* Views */}
-
                         <div className="flex items-center gap-1">
 
                             <FaEye/>
@@ -231,11 +181,6 @@ function BlogCard({ blog }) {
                             {blog.views || 0}
 
                         </div>
-
-
-
-
-                        {/* Reading Time */}
 
                         {
                             blog.readingTime && (
@@ -250,39 +195,23 @@ function BlogCard({ blog }) {
 
                             )
                         }
-
-
                     </div>
-
-
-
-
-
-                    {/* Read More */}
 
                     <Link
                         to={`/blogs/${blog.slug}`}
                         className="flex items-center gap-2 text-blue-600 hover:gap-3 transition-all"
                     >
-
                         Read More
-
                         <FaArrowRight/>
 
                     </Link>
 
-
                 </div>
-
 
             </div>
 
-
         </article>
-
     );
-
 }
-
 
 export default BlogCard;
