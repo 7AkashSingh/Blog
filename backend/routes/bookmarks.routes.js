@@ -3,7 +3,7 @@ import { Router } from "express";
 import {
     toggleBookmark,
     getMyBookmarks,
-} from "../controllers/bookmark.controller.js";
+} from "../controllers/Bookmark.controller.js";
 
 import { verifyJWT } from "../middleware/auth.middleware.js";
 
