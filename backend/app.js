@@ -24,7 +24,7 @@ import userRouter from "./routes/user.routes.js";
 import blogRouter from "./routes/blog.routes.js";
 import categoryRouter from "./routes/category.routes.js";
 import commentRouter from "./routes/commentes.routes.js"
-import likesRouter from "./routes/LIkes.routes.js"
+import likesRouter from "./routes/Likes.routes.js"
 import bookmarkRouter from "./routes/bookmarks.routes.js"
 import followRouter from "./routes/follow.routes.js";
 import feedRoutes from "./routes/feed.routes.js";
