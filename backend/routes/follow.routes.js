@@ -7,7 +7,7 @@ import {
     getFollowers,
     getFollowing,
     checkFollowStatus
-} from "../controllers/follow.controller.js";
+} from "../controllers/Follow.controller.js";
 
 const router = Router();
 

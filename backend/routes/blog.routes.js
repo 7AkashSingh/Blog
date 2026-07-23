@@ -14,7 +14,7 @@ import {
     getBlogsByTag,
     getMyBlogs,
     getBlogById,
-} from "../controllers/blog.controller.js";
+} from "../controllers/Blog.controller.js";
 
 import { verifyJWT } from "../middleware/auth.middleware.js";
 import { isBlogOwner } from "../middleware/isBlogOwner.middleware.js";

@@ -4,7 +4,7 @@ import { verifyJWT } from "../middleware/auth.middleware.js";
 import {
     getNotifications,
     markAsRead
-} from "../controllers/notification.controller.js";
+} from "../controllers/Notification.controller.js";
 
 const router = Router();
 
