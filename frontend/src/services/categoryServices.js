@@ -1,12 +1,6 @@
-import axios from "axios";
-
-
-const API_URL = "http://localhost:8000/api/v1/categories";
-
+import API from "../../api/axios.js";
 
 export const getCategoriesAPI = async () => {
-
-    const response = await axios.get(API_URL);
-
+    const response = await API.get("/categories");
     return response.data.data;
 };
